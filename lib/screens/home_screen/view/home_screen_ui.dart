@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/homeprovider.dart';
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     homeProviderfalse = Provider.of<HomeProvider>(context, listen: false);
     homeProvidertrue = Provider.of<HomeProvider>(context, listen: true);
-  
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -37,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
           gridDelegate: SliverWovenGridDelegate.count(
             crossAxisCount: 2,
             mainAxisSpacing: 8,
-            crossAxisSpacing: 8
+            crossAxisSpacing: 8,
             pattern: [
               WovenGridTile(1),
               WovenGridTile(
